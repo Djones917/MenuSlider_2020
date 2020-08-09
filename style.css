@@ -150,6 +150,11 @@ button:focus {
 }
 
 
+.modal-container.show-modal {
+   display: block;   
+}
+
+
 .modal {
     background-color: #fff;
     border-radius: 5px;
@@ -161,6 +166,8 @@ button:focus {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
 }
 
 
@@ -208,3 +215,12 @@ button:focus {
 }
 
 
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
